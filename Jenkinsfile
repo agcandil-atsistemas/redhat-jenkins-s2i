@@ -16,8 +16,9 @@ pipeline {
           }
         }
         steps {
-
-          echo 'Publish  '
+          sh "docker tag atsistemas/jenkins-2-rhel7:latest registry.atsistemas.com/atsistemas/jenkins-2-rhel7:1.0.0 "
+          sh "docker push registry.atsistemas.com/atsistemas/jenkins-2-rhel7:1.0.0 "
+          echo 'Publish  OK'
         }
       }
     }
