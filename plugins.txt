@@ -1,2 +1,6 @@
 cloudbees-bitbucket-branch-source:latest
+bitbucket:1.1.8
+bitbucket-build-status-notifier:1.4.0
+bitbucket-approve:1.0.3
+bitbucket-pullrequest-builder:1.4.26
 rocketchatnotifier:latest
