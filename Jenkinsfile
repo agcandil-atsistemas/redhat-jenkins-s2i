@@ -1,9 +1,10 @@
 pipeline {
-    agent {
-        docker { image 'registry.access.redhat.com/rhscl/s2i-core-rhel7' }
-    }
+    agent any
     stages {
       stage('s2i') {
+        agent {
+            docker { image 'registry.access.redhat.com/rhscl/s2i-core-rhel7' }
+        }
         steps {
           echo "branch name: $BRANCH_NAME"
           sh "ls -alsh"
