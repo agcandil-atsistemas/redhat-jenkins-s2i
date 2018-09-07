@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'registry.access.redhat.com/rhscl/s2i-core-rhel7' }
+    }
     stages {
       stage('s2i') {
         steps {
