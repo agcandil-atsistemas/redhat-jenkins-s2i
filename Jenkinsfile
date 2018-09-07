@@ -5,7 +5,7 @@ pipeline {
         steps {
           echo "branch name: $BRANCH_NAME"
           sh "ls -alsh"
-          sh "s2i build https://github.com/agcandil-atsistemas/redhat-jenkins-s2i registry.access.redhat.com/openshift3/jenkins-2-rhel7 atsistemas/jenkins-2-rhel7"
+          sh "s2i build https://github.com/agcandil-atsistemas/redhat-jenkins-s2i registry.access.redhat.com/openshift3/jenkins-2-rhel7 atsistemas/jenkins-2-rhel7 --network host"
 
         }
       }
