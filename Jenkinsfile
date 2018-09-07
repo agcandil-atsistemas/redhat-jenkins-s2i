@@ -2,13 +2,10 @@ pipeline {
     agent any
     stages {
       stage('s2i') {
-        agent {
-            docker { image 'registry.access.redhat.com/rhscl/s2i-core-rhel7' }
-        }
         steps {
           echo "branch name: $BRANCH_NAME"
           sh "ls -alsh"
-          sh "s2i build . registry.access.redhat.com/openshift3/jenkins-2-rhel7 atsistemas/jenkins-2-rhel7"
+          sh "s2i build https://github.com/agcandil-atsistemas/redhat-jenkins-s2i registry.access.redhat.com/openshift3/jenkins-2-rhel7 atsistemas/jenkins-2-rhel7"
 
         }
       }
