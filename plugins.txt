@@ -4,3 +4,4 @@ bitbucket-build-status-notifier:latest
 bitbucket-approve:latest
 bitbucket-pullrequest-builder:latest
 rocketchatnotifier:latest
+sonar:2.6.1
